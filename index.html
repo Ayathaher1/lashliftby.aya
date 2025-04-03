@@ -44,23 +44,27 @@
     section h2 {
       color: #a97c50;
     }
-    .booking-times button {
-      margin: 5px;
-      padding: 10px 16px;
-      border: none;
-      border-radius: 20px;
+    ul.time-slots {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul.time-slots li {
+      background: #fcece1;
+      padding: 10px 14px;
+      margin: 6px 0;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+    a.button {
       background-color: #d1a074;
       color: white;
+      padding: 12px 24px;
+      border-radius: 25px;
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
       font-weight: bold;
-      cursor: pointer;
-    }
-    input, select {
-      width: 100%;
-      padding: 10px;
-      margin: 8px 0;
-      box-sizing: border-box;
-      border-radius: 10px;
-      border: 1px solid #ccc;
+      font-size: 1rem;
     }
   </style>
 </head>
@@ -85,23 +89,27 @@
     <p><strong>Kombobehandling</strong> – 450 kr</p>
   </section>
 
- <section id="boka">
-  <h2>Boka tid</h2>
-  <p>Alla bokningar sker via DM på Instagram 💌</p>
-  <a href="https://instagram.com/lashliftby.aya" target="_blank">
-    <button style="background-color:#d1a074;color:white;padding:12px 24px;border:none;border-radius:20px;font-size:1rem;font-weight:bold;">
-      Boka via Instagram
-    </button>
-  </a>
-  <p style="margin-top: 30px; font-size: 0.95em; color: #5a4a3c;">
-    <strong>Avbokningspolicy:</strong><br>
-    Avbokning ska ske minst 24 timmar innan bokad tid.<br>
-    Vid sen avbokning eller uteblivet besök debiteras 100% av behandlingskostnaden.<br>
-    Tack för din förståelse 💗
-  </p>
-</section>
-
-
+  <section id="boka">
+    <h2>Boka tid</h2>
+    <p>Lediga tider varje <strong>lördag mellan 12:15 och 16:00</strong></p>
+    <ul class="time-slots">
+      <li>12:15</li>
+      <li>13:00</li>
+      <li>13:45</li>
+      <li>14:30</li>
+      <li>15:15</li>
+    </ul>
+    <p>Boka genom att skicka ett direktmeddelande via Instagram med namn, tid och behandling:</p>
+    <a class="button" href="https://instagram.com/lashliftby.aya" target="_blank">
+      Boka via Instagram DM
+    </a>
+    <p style="margin-top: 30px; font-size: 0.95em; color: #5a4a3c;">
+      <strong>Avbokningspolicy:</strong><br>
+      Avbokning ska ske minst 24 timmar innan bokad tid.<br>
+      Vid sen avbokning eller uteblivet besök debiteras 100% av behandlingskostnaden.<br>
+      Tack för din förståelse 💗
+    </p>
+  </section>
 
   <section id="om">
     <h2>Om mig</h2>
@@ -117,3 +125,4 @@
   </section>
 </body>
 </html>
+
