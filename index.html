@@ -6,87 +6,75 @@
   <title>lashliftby.aya</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
+      font-family: 'Segoe UI', sans-serif;
       background-color: #fff8f4;
-      color: #333;
+      color: #4a3c31;
     }
     header {
-      background-color: #fce4ec;
-      padding: 20px;
       text-align: center;
+      padding: 30px 20px 10px;
+    }
+    header img {
+      width: 120px;
+      border-radius: 50%;
+      margin-bottom: 10px;
     }
     header h1 {
       margin: 0;
-      font-size: 2.5rem;
-      color: #d81b60;
+      font-size: 2.2em;
+      font-family: 'Playfair Display', serif;
+      color: #a97c50;
     }
     nav {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      background-color: #ffeef4;
-      padding: 10px;
+      text-align: center;
+      margin-top: 20px;
     }
     nav a {
+      margin: 0 15px;
       text-decoration: none;
-      color: #d81b60;
       font-weight: bold;
+      color: #d1a074;
     }
     section {
-      padding: 30px;
-      max-width: 900px;
-      margin: auto;
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
-    .cta {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      background-color: #d81b60;
-      color: white;
-      border-radius: 30px;
-      text-decoration: none;
+    section h2 {
+      color: #a97c50;
     }
     .booking-times button {
-      display: block;
-      margin: 8px 0;
-      padding: 10px;
-      width: 100%;
-      background-color: #f8bbd0;
+      margin: 5px;
+      padding: 10px 16px;
       border: none;
-      border-radius: 10px;
-      font-size: 16px;
+      border-radius: 20px;
+      background-color: #d1a074;
+      color: white;
+      font-weight: bold;
       cursor: pointer;
     }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
-    }
-    .gallery img {
+    input, select {
       width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      box-sizing: border-box;
       border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #fce4ec;
-      font-size: 0.9rem;
+      border: 1px solid #ccc;
     }
   </style>
 </head>
 <body>
   <header>
+    <img src="logo-lashliftbyaya.png" alt="Logo">
     <h1>lashliftby.aya</h1>
-    <p>Professionell lash- & browlift i Karlstad – Våxnäs</p>
+    <p>Karlstad – Våxnäs</p>
   </header>
 
   <nav>
     <a href="#tjanster">Tjänster</a>
     <a href="#boka">Boka</a>
     <a href="#om">Om mig</a>
-    <a href="#forefter">Före & Efter</a>
     <a href="#kontakt">Kontakt</a>
   </nav>
 
@@ -94,52 +82,53 @@
     <h2>Tjänster</h2>
     <p><strong>Lashlift</strong> – 250 kr</p>
     <p><strong>Browlift</strong> – 250 kr</p>
-    <p><strong>Kombobehandling</strong> –450  kr</p>
+    <p><strong>Kombobehandling</strong> – 450 kr</p>
   </section>
 
   <section id="boka">
     <h2>Boka tid</h2>
-    <p>Välj en ledig lördagstid nedan:</p>
-    <div class="booking-times">
-      <button>12:15</button>
-      <button>12:45</button>
-      <button>13:15</button>
-      <button>13:45</button>
-      <button>14:15</button>
-      <button>14:45</button>
-      <button>15:15</button>
-      <button>15:45</button>
-    </div>
-    <a href="https://instagram.com/lashliftby.aya" class="cta" target="_blank">Boka via Instagram DM</a>
+    <p>Välj en ledig tid eller skicka en förfrågan:</p>
+
+    <form action="mailto:ayathaher11@gmail.com" method="post" enctype="text/plain">
+      <label for="namn">Namn:</label><br>
+      <input type="text" id="namn" name="Namn" required><br>
+
+      <label for="mail">E-post:</label><br>
+      <input type="email" id="mail" name="E-post" required><br>
+
+      <label for="tid">Önskad tid (lördag 12:15–16:00):</label><br>
+      <input type="text" id="tid" name="Tid" placeholder="t.ex. 13:15"><br>
+
+      <label for="behandling">Behandling:</label><br>
+      <select id="behandling" name="Behandling">
+        <option>Lashlift</option>
+        <option>Browlift</option>
+        <option>Kombobehandling</option>
+      </select><br><br>
+
+      <input type="submit" value="Skicka bokning" style="background-color: #d1a074; color: white; padding: 10px 20px; border: none; border-radius: 20px; font-weight: bold;">
+    </form>
+
+    <p style="margin-top: 40px; font-size: 0.95em; color: #5a4a3c;">
+      <strong>Avbokningspolicy:</strong><br>
+      Avbokning ska ske minst 24 timmar innan bokad tid.<br>
+      Vid sen avbokning eller uteblivet besök debiteras 100% av behandlingskostnaden.<br>
+      Tack för din förståelse 💗
+    </p>
   </section>
 
   <section id="om">
     <h2>Om mig</h2>
-    <p>JJag heter Aya och är student med ett stort intresse för skönhet och välmående. Vid sidan av mina studier erbjuder jag lashlift och browlift i min lilla studio i Våxnäs, Karlstad. </p>
+    <p>Hej! Jag heter Aya och är student med ett stort intresse för skönhet och välmående. Vid sidan av mina studier erbjuder jag lashlift och browlift i min lilla studio i Våxnäs, Karlstad.</p>
     <p>Jag använder produkter från <strong>Permalift</strong> – ett välkänt och professionellt märke som är skonsamt mot både fransar och hud. Det passar perfekt för dig som vill ha ett naturligt lyft utan att slita på stråna.</p>
-   <p>Varmt välkommen att boka en tid!</p>
-  </section>
-
-  <section id="forefter">
-    <h2>Före & Efter</h2>
-    <div class="gallery">
-      <img src="IMG_2299.jpeg" alt="Före 1">
-      <img src="IMG_2303.jpeg" alt="Efter 1">
-      <img src="IMG_2287.jpeg" alt="Före 2">
-      <img src="IMG_2292.jpeg" alt="Efter 2">
-      <img src="IMG_0671.jpeg" alt="Före 3">
-      <img src="IMG_0677.jpeg" alt="Efter 3">
-    </div>
+    <p>För mig är det viktigt att varje kund känner sig trygg, sedd och omhändertagen. Du får en avslappnande stund och lämnar med fransar och bryn som känns både fräscha och lyxiga – utan överdrift.</p>
+    <p>Varmt välkommen att boka en tid, jag ser fram emot att ta hand om dig!</p>
   </section>
 
   <section id="kontakt">
     <h2>Kontakt</h2>
-    <p><strong>Adress:</strong> Inlandsgatan 1A, Karlstad</p>
-    <p><strong>Instagram:</strong> <a href="https://instagram.com/lashliftby.aya" target="_blank">@lashliftby.aya</a></p>
+    <p>Instagram: <a href="https://instagram.com/lashliftby.aya" target="_blank">@lashliftby.aya</a></p>
   </section>
-
-  <footer>
-    &copy; 2025 lashliftby.aya – All rights reserved
-  </footer>
 </body>
 </html>
+
